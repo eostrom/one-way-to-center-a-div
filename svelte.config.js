@@ -1,3 +1,5 @@
+import adapter from '@sveltejs/adapter-netlify'
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
@@ -5,6 +7,7 @@ const config = {
 	preprocess: null,
 
 	kit: {
+		adapter: adapter(),
 		vite: {
 			 server: {
 				 fs: {
